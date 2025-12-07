@@ -6,7 +6,8 @@
   "client": [
     "arsonist.ArsonistHudMixin",
     "neutral.NeutralRoleAnnouncementMixin",
-    "neutral.NeutralRoleTextRendering"
+    "neutral.NeutralRoleTextRendering",
+    "amnesiac.AmnesiacHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1

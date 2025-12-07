@@ -1,9 +1,10 @@
 package pro.fazeclan.river.stupid_express.arsonist;
 
 import dev.doctor4t.trainmurdermystery.cca.GameWorldComponent;
+import dev.doctor4t.trainmurdermystery.game.GameFunctions;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionResult;
 import pro.fazeclan.river.stupid_express.ModItems;
 import pro.fazeclan.river.stupid_express.StupidExpress;
@@ -35,7 +36,14 @@ public class OilDousingHandler {
                 return InteractionResult.PASS;
             }
             if (interacting.gameMode.isSurvival()) {
-                interacting.getCooldowns().addCooldown(item.getItem(), 60 * 20);
+                var playerCount = ((ServerLevel) level).getPlayers(GameFunctions::isPlayerAliveAndSurvival).size();
+                var cd = 45 - (5/3.0) * (double) playerCount;
+
+                if (playerCount > 15) {
+                    cd = 20;
+                }
+
+                interacting.getCooldowns().addCooldown(item.getItem(), (int) (cd * 20));
             }
             DousedPlayerComponent doused = DousedPlayerComponent.KEY.get(victim);
             doused.setDoused(true);

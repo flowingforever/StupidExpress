@@ -56,7 +56,7 @@ public class StupidExpress implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        Harpymodloader.setRoleMaximum(AMNESIAC, 1);
+        //Harpymodloader.setRoleMaximum(AMNESIAC, 1);
         RoleSelectionHandler.init();
 
         Harpymodloader.setRoleMaximum(ARSONIST, 1);
