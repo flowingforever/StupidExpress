@@ -27,7 +27,6 @@ public class NecromancerStatsMixin {
             var nc = NecromancerComponent.KEY.get(victim.level());
             nc.increaseAvailableRevives();
             nc.sync();
-            StupidExpress.LOGGER.info("necromancer increased by 1");
         }
 
     }
@@ -40,7 +39,6 @@ public class NecromancerStatsMixin {
 
         var component = NecromancerComponent.KEY.get(world);
         component.reset();
-        StupidExpress.LOGGER.info("necromancer reset");
 
     }
 
