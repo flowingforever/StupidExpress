@@ -6,7 +6,7 @@ import dev.doctor4t.wathe.cca.PlayerShopComponent;
 import dev.doctor4t.wathe.client.gui.RoleAnnouncementTexts;
 import dev.doctor4t.wathe.compat.TrainVoicePlugin;
 import dev.doctor4t.wathe.entity.PlayerBodyEntity;
-import dev.doctor4t.wathe.util.AnnounceWelcomePayload;
+import dev.doctor4t.wathe.network.AnnounceWelcomePayload;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.level.ServerLevel;
@@ -82,6 +82,8 @@ public class RevivalSelectionHandler {
 
             PlayerShopComponent playerShopComponent = PlayerShopComponent.KEY.get(revived);
             playerShopComponent.setBalance(200);
+
+            TrainVoicePlugin.resetPlayer(revived.getUUID()); // remove the revived from the spectator group
 
             if (Harpymodloader.VANNILA_ROLES.contains(selectedRole)) {
                 ServerPlayNetworking.send(
