@@ -41,7 +41,7 @@
     "fabricloader": "*",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "harpymodloader": "*",
-    "fzzy_config": "*"
+    "harpymodloader": ">=1.2.5-h1.4",
+    "fzzy_config": ">=0.7.7+1.21"
   }
 }
