@@ -102,9 +102,11 @@ public abstract class LoversHudMixin {
             var lovers = component.getAllWithModifier(SEModifiers.LOVERS);
             lovers.remove(StupidExpressClient.target.getUUID());
             for (UUID uuid : lovers) {
+                var lover = clientLevel.getPlayerByUUID(uuid);
+                if (lover == null) continue;
                 stupidexpress$renderLoversHud(renderer, context, Component.translatable(
                         "hud.stupid_express.lovers.in_love",
-                        clientLevel.getPlayerByUUID(uuid).getName()
+                        lover.getName()
                 ));
             }
         }

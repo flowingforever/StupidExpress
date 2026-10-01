@@ -1,6 +1,3 @@
-## Archived for now. I'll be back when I'm actually interested in Harpy Express again.
-
----
 # STUPID EXPRESS!!!!!!!!!
 
 ### hello this is my role mod that is awesome and cool Thanks
