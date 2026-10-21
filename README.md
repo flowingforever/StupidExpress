@@ -26,3 +26,4 @@ Requires [HarpyModLoader](https://modrinth.com/mod/harpymodloader)
 ### Special Thanks!!!!
 - I thank Creepalotl for making the Jerry Can and Lighter textures... Couldn't have done it better myself!!
 - Thank you to [ZeroIcceBear](https://github.com/ZeroIcceBear), [YanyanKagou](https://github.com/YanyanKagou), [Qlickly_](https://github.com/Qlickly) and [haiman233](https://github.com/haiman233) for the Chinese translations!!!
+- Thank you to [ItzMokaccino](https://itzmokaccino.carrd.co/#redes) for the Spanish translations!!!
